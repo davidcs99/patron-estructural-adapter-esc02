@@ -372,8 +372,6 @@ import Swal from 'sweetalert2';
         try {
               const costoMatricula= await axios.get(`/vehiculo/matricula?tipoVehiculo=${this.formData.tipo_vehiculo}`);
 
-              alert('Su Vehículo se ha registrado con exito, \n'+' El costo de la matricula es '+costoMatricula.data)
-              
            await axios.post('/vehiculo',  
             {
               vin: this.formData.vin,
