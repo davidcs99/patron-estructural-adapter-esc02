@@ -299,6 +299,7 @@
   
   <script>
 import axios from '@/plugins/axios';
+import Swal from 'sweetalert2';
 
   export default {
     data() {
@@ -369,6 +370,10 @@ import axios from '@/plugins/axios';
     methods: {
       async submitForm() {
         try {
+              const costoMatricula= await axios.get(`/vehiculo/matricula?tipoVehiculo=${this.formData.tipo_vehiculo}`);
+
+              alert('Su Vehículo se ha registrado con exito, \n'+' El costo de la matricula es '+costoMatricula.data)
+              
            await axios.post('/vehiculo',  
             {
               vin: this.formData.vin,
@@ -388,7 +393,7 @@ import axios from '@/plugins/axios';
               tipoVehiculo: this.formData.tipo_vehiculo
             }
            );
-           await axios.get('/vehiculo');
+           alert('Su Vehículo se ha registrado con exito, \n'+' El costo de la matricula es '+costoMatricula.data)
         } catch (error) {
           this.error = 'Error al registrar el vehiculo: ' + error.message;
         }
