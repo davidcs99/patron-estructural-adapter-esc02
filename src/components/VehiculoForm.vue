@@ -388,17 +388,9 @@ import axios from '@/plugins/axios';
               tipoVehiculo: this.formData.tipo_vehiculo
             }
            );
-          const response = await axios.get('/vehiculo');
-          console.log('Formulario enviado:', this.formData)
-           console.log(response.data)
-          /* this.dialog = false
-          alert("Usuario Guardado exitosamente")
-          this.nombre= "",
-          this.apellido= "",
-          this.usuario= "", */
-          this.password= ""
+           await axios.get('/vehiculo');
         } catch (error) {
-          this.error = 'Error al obtener usuarios: ' + error.message;
+          this.error = 'Error al registrar el vehiculo: ' + error.message;
         }
       },
     }
