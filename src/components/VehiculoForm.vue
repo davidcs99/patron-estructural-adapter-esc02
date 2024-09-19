@@ -327,7 +327,7 @@
             <v-btn
               color="blue darken-1"
               text
-              @click="submitForm()"
+              type="submit"
             >
               Enviar
             </v-btn>
@@ -377,7 +377,6 @@ import axios from '@/plugins/axios';
           { title: 'Combustible', value: 'tipoCombustible' },
           { title: 'Potencia', value: 'potencia' },
           { title: 'Unidad', value: 'unidadPotencia' },
-          { title: 'Tipo', value: 'tipoEspecifico' },
           { title: 'Tipo', value: 'tipoVehiculo' },
           { title: 'Acciones', value: 'actions', sortable: false }
         ],
