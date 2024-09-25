@@ -343,6 +343,7 @@
 import axios from '@/plugins/axios';
 
   export default {
+    name: 'VehiculoForm',
     data() {
       return {
         formData: {
